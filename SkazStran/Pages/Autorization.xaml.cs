@@ -76,8 +76,8 @@ namespace SkazStran.Pages
 
         private void ResPassClick(object sender, RoutedEventArgs e)
         {
-            Remember remWindow = new Remember(context);
-            remWindow.Show();
+            User us = context.User.Find(LoginBox.Text);
+            NavigationService.Navigate(new Remember(us));
         }
     }
 }

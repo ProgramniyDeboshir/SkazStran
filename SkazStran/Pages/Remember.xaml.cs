@@ -17,40 +17,26 @@ namespace SkazStran.Pages
     /// <summary>
     /// Логика взаимодействия для Remember.xaml
     /// </summary>
-    public partial class Remember : Window
+    public partial class Remember : Page
     {
-        SkazStranEntities context;
-        public Remember(SkazStranEntities cont)
+        User _user;
+        public Remember(User user)
         {
             InitializeComponent();
-            context = cont;
+            fio.Text=user.Login;
+            _user = user;
         }
 
         private void CloseClick(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            NavigationService.GoBack();
         }
 
         private void ShowPassClick(object sender, RoutedEventArgs e)
         {
-            int tab1 =Convert.ToInt32(tab.Text);
-            string fio1 = fio.Text;
-            DateTime dat1 =Convert.ToDateTime(dat.Text);
-            string pos1 = pos.Text;
-            User user= context.User.Find(fio1);
-            if (user != null)
+            if (_user.Login==fio.Text && _user.tabNum==Convert.ToInt32(tab.Text) && _user.position == pos.Text && _user.dateStartWork == Convert.ToDateTime(dat.Text))
             {
-                if (user.tabNum.Equals(tab1))
-                {
-                    if (user.position.Equals(pos1))
-                    {
-                        if (user.dateStartWork.Equals(dat1))
-                        {
-                            MessageBox.Show("Ваш Пароль: " + user.Password);
-                        }
-
-                    }
-                }
+                MessageBox.Show($"Ваш пароль: {_user.Password}", "Пароль", MessageBoxButton.OK, MessageBoxImage.Information) ;
             }
         }
     }
