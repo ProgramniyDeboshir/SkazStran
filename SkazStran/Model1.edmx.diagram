@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="796a573c658049d284cc52916d7be947" Name="Diagram1">
+        <EntityTypeShape EntityType="SkazStranModel.Batch" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.Client" Width="1.5" PointX="1.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.Employer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.Material" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.Order" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.Position" Width="1.5" PointX="1.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.State" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.sysdiagrams" Width="1.5" PointX="3.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.Toy" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.ToyInOrder" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.ToyMaterial" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkazStranModel.User" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="SkazStranModel.FK_Batch_Employer" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_Batch_Toy" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_Order_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_Employer_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_ToyMaterial_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_Order_State" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_ToyInOrder_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_ToyInOrder_Toy" ManuallyRouted="false" />
+        <AssociationConnector Association="SkazStranModel.FK_ToyMaterial_Toy" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
