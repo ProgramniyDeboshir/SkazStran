@@ -27,7 +27,7 @@
             <TextBox Name="pos"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Margin="100 0" Background="#42AAFF">
-            <TextBlock>Введите дату трудоустройства</TextBlock>
+            <TextBlock>Введите дату трудоустройства (в формате "гггг-мм-дд")</TextBlock>
             <TextBox Name="dat"/>
         </StackPanel>
         <Button Grid.Row="4" Margin="200 20" HorizontalAlignment="Left" Click="ShowPassClick">Продолжить</Button>
