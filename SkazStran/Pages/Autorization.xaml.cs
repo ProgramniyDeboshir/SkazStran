@@ -24,13 +24,15 @@ namespace SkazStran.Pages
     public partial class Authorization : Page
     {
         SkazStranEntities context;
-        public Authorization(SkazStranEntities cont)
+        Window window;
+        public Authorization(SkazStranEntities cont, Window w)
         {
             InitializeComponent();
             context = cont;
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 30);
             timer.Tick += Timer_Tick;
+            window = w;
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -52,6 +54,7 @@ namespace SkazStran.Pages
                 {
                     MessageBox.Show("Вы успешно авторизованы!");
                     countClick = 0;
+                    NavigationService.Navigate(new MainMenu(context, window));
                 }
                 else
                 {

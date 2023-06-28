@@ -26,7 +26,7 @@ namespace SkazStran
         {
             InitializeComponent();
             context = new SkazStranEntities();
-            MyFrame.Navigate(new Pages.Authorization(context));
+            MyFrame.Navigate(new Pages.Authorization(context, this));
         }
     }
 }

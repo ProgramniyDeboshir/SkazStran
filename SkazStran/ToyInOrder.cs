@@ -17,7 +17,11 @@ namespace SkazStran
         public int idToy { get; set; }
         public int idOrder { get; set; }
         public int count { get; set; }
-    
+        public string nazv { get { return Toy.title; } }
+        public decimal cost { get { return Toy.costForOne * count; } }
+        public DateTime date { get { return Order.date; } }
+        public int stat { get { return Order.state; } }
+
         public virtual Order Order { get; set; }
         public virtual Toy Toy { get; set; }
     }
