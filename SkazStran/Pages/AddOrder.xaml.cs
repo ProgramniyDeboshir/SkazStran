@@ -38,7 +38,7 @@ namespace SkazStran.Pages
             ToyInOrder toyOrd = new ToyInOrder()
             {
                 idOrder = Convert.ToInt32(id.Text),
-
+                
             };
         }
     }
