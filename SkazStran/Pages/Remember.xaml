@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkazStran.Pages"
         mc:Ignorable="d"
-        Title="Remember" Height="500" Width="800">
+        Title="Remember" Height="500" Width="1000">
     <Grid Background="#ccad00">
         <Grid.RowDefinitions>
             <RowDefinition/>

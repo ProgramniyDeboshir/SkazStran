@@ -20,5 +20,8 @@
             <Setter Property="Margin" Value="10 0"/>
             <Setter Property="Background" Value="#b0b7c6"/>
         </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="21"/>
+        </Style>
     </Application.Resources>
 </Application>

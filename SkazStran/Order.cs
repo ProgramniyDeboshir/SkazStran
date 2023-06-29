@@ -24,7 +24,7 @@ namespace SkazStran
         public int idClent { get; set; }
         public System.DateTime date { get; set; }
         public int state { get; set; }
-        public string stat { get { return State1.title; } }
+    
         public virtual Client Client { get; set; }
         public virtual State State1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

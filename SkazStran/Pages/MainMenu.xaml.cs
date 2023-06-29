@@ -33,10 +33,14 @@ namespace SkazStran.Pages
         {
             Window.Close();
         }
-
-        private void OrderClick(object sender, RoutedEventArgs e)
+        private void MastersClick(object sender, RoutedEventArgs e)
         {
-            FrameToBase.Navigate(new OrderPage(_context));
+            FrameToBase.Navigate(new MastersPage(_context));
+        }
+
+        private void СLientsClick(object sender, RoutedEventArgs e)
+        {
+            FrameToBase.Navigate(new Clients(_context));
         }
     }
 }

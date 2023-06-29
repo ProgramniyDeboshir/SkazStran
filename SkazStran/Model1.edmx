@@ -35,6 +35,16 @@
           <Property Name="position" Type="int" Nullable="false" />
           <Property Name="salary" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
+        <EntityType Name="Master">
+          <Key>
+            <PropertyRef Name="tubNUM" />
+          </Key>
+          <Property Name="FIO" Type="nvarchar" MaxLength="50" />
+          <Property Name="tubNUM" Type="int" Nullable="false" />
+          <Property Name="dateStartWork" Type="date" />
+          <Property Name="salary" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Material">
           <Key>
             <PropertyRef Name="id" />
@@ -225,6 +235,7 @@
           <EntitySet Name="Batch" EntityType="Self.Batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employer" EntityType="Self.Employer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Master" EntityType="Self.Master" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Material" EntityType="Self.Material" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
@@ -310,6 +321,16 @@
           <Property Name="salary" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <NavigationProperty Name="Batch" Relationship="Self.FK_Batch_Employer" FromRole="Employer" ToRole="Batch" />
           <NavigationProperty Name="Position1" Relationship="Self.FK_Employer_Position" FromRole="Employer" ToRole="Position" />
+        </EntityType>
+        <EntityType Name="Master">
+          <Key>
+            <PropertyRef Name="tubNUM" />
+          </Key>
+          <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tubNUM" Type="Int32" Nullable="false" />
+          <Property Name="dateStartWork" Type="DateTime" Precision="0" />
+          <Property Name="salary" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Material">
           <Key>
@@ -514,6 +535,7 @@
           <EntitySet Name="Batch" EntityType="Self.Batch" />
           <EntitySet Name="Client" EntityType="Self.Client" />
           <EntitySet Name="Employer" EntityType="Self.Employer" />
+          <EntitySet Name="Master" EntityType="Self.Master" />
           <EntitySet Name="Material" EntityType="Self.Material" />
           <EntitySet Name="Order" EntityType="Self.Order" />
           <EntitySet Name="Position" EntityType="Self.Position" />
@@ -596,6 +618,17 @@
                 <ScalarProperty Name="dateStartWork" ColumnName="dateStartWork" />
                 <ScalarProperty Name="position" ColumnName="position" />
                 <ScalarProperty Name="salary" ColumnName="salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Master">
+            <EntityTypeMapping TypeName="SkazStranModel.Master">
+              <MappingFragment StoreEntitySet="Master">
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="tubNUM" ColumnName="tubNUM" />
+                <ScalarProperty Name="dateStartWork" ColumnName="dateStartWork" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="State" ColumnName="State" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -28,6 +28,7 @@ namespace SkazStran
         public virtual DbSet<Batch> Batch { get; set; }
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Employer> Employer { get; set; }
+        public virtual DbSet<Master> Master { get; set; }
         public virtual DbSet<Material> Material { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Position> Position { get; set; }

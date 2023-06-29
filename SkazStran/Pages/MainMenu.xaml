@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SkazStran.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="1000"
       Title="MainMenu">
 
     <Grid Background="#ffd700">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Background="#ccad00">
             <Grid.RowDefinitions>
@@ -27,12 +27,10 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Source="/Images/logo.png" Height="150"/>
-            <Button Grid.Row="1" Click="OrderClick" Name="Ord">Закзы</Button>
-            <Button Grid.Row="3">Заказчики</Button>
-            <Button Grid.Row="5">Материалы</Button>
-            <Button Grid.Row="7">Мастера</Button>
+            <Button Grid.Row="1" Click="MastersClick">Мастера</Button>
+            <Button Grid.Row="3" Click="СLientsClick">Клиенты</Button>
             <Button Grid.Row="9" Name="Escape" Click="EscapeClick">Выйти</Button>
         </Grid>
-        <Frame Name="FrameToBase" Grid.Column="1" Margin="0,0,-290,0"/>
+        <Frame Name="FrameToBase" Grid.Column="1" HorizontalAlignment="Left" Width="800" />
     </Grid>
 </Page>

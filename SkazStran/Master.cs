@@ -11,14 +11,13 @@ namespace SkazStran
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class ToyInOrder
+
+    public partial class Master
     {
-        public int idToy { get; set; }
-        public int idOrder { get; set; }
-        public int count { get; set; }
-    
-        public virtual Order Order { get; set; }
-        public virtual Toy Toy { get; set; }
+        public string FIO { get; set; }
+        public int tubNUM { get; set; }
+        public Nullable<System.DateTime> dateStartWork { get; set; }
+        public Nullable<decimal> salary { get; set; }
+        public string State { get; set; }
     }
 }
